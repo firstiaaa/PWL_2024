@@ -24,6 +24,19 @@ Route::resource('photos', PhotoController::class)->only(['index', 'show'
 Route::resource('photos', PhotoController::class)->except(['create', 'store', 'update', 'destroy' 
     ]); 
 
+
+//view
+
+// Route::get('/greeting', function () { 
+//     return view('blog.hello', ['name' => 'FIRSTIA']); 
+//     });
+
+    Route::get('/greeting', [WelcomeController::class, 
+    'greeting']);
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
